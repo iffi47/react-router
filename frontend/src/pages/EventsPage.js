@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const DUMMY_EVENTS = [
  {
   id: "e1",
@@ -31,7 +33,9 @@ export default function EventsPage() {
    <ul>
     {DUMMY_EVENTS.map((event) => (
      <li key={event.id}>
-      <h2>{event.title}</h2>
+      <Link to={`/events/${event.id}`}>
+       <h2>{event.title}</h2>
+      </Link>
       <p>
        {event.date} — {event.location}
       </p>
