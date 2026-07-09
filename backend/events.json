@@ -1,11 +1,1 @@
-{
-  "events": [
-    {
-      "id": "e1",
-      "title": "A dummy event",
-      "date": "2023-02-22",
-      "image": "https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg",
-      "description": "Join this amazing event and connect with fellow developers."
-    }
-  ]
-}
+{"events":[{"title":"fhjghj","image":"https://ssl.com/wp-content/uploads/2019/04/CDN.png","date":"2026-07-24","description":"hgfhgthgf","id":"6a66a797-7494-49c3-8b06-7a9b2b29fa1b"},{"title":"fghfg","image":"https://ssl.com/wp-content/uploads/2019/04/CDN.png","date":"2026-07-09","description":"fgdhfghfgt","id":"25fa001b-808e-4c14-9360-e0a46435cd96"},{"title":"dfsggf","image":"https://ssl.com/wp-content/uploads/2019/04/CDN.png","date":"2026-07-09","description":"gfgdf","id":"5188b688-6e47-45ba-a1e7-4d1f165a0f78"},{"title":"CDN Workshop","image":"https://ssl.com/wp-content/uploads/2019/04/CDN.png","date":"2026-07-10","description":"Attend please!","id":"b2fc493e-52ca-48ba-8325-25825d4d9878"},{"id":"e1","title":"A dummy event","date":"2023-02-22","image":"https://blog.hubspot.de/hubfs/Germany/Blog_images/Optimize_Marketing%20Events%20DACH%202021.jpg","description":"Join this amazing event and connect with fellow developers."}]}
