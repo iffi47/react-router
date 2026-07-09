@@ -7,7 +7,7 @@ export default function RootLayout() {
   <>
    <MainNavigation />
    <main>
-    {navigation.state === "loading" && <p>Loading.....</p>}
+    {navigation.state !== "idle" && <p>Loading.....</p>}
     <Outlet />
    </main>
   </>
