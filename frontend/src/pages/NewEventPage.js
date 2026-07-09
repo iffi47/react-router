@@ -10,22 +10,23 @@ export default function NewEventPage() {
 }
 
 export async function action({ request, params }) {
- const data = await request.formData();
+ const formData = await request.formData();
  const eventData = {
-  title: data.get("title"),
-  image: data.get("image"),
-  date: data.get("date"),
-  description: data.get("description"),
+  title: formData.get("title"),
+  image: formData.get("image"),
+  date: formData.get("date"),
+  description: formData.get("description"),
  };
- const response = fetch("http://localhost:8080/events", {
+ const response = await fetch("http://localhost:8080/events", {
   method: "POST",
   headers: {
    "Content-Type": "application/json",
   },
   body: JSON.stringify(eventData),
  });
+
  if (!response.ok) {
-  throw data({ message: "Could not saved data!" }, { status: 500 });
+  throw data({ message: "Could not save data!" }, { status: 500 });
  }
  return redirect("/events");
 }
