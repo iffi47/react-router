@@ -1,37 +1,52 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
-import EventsList from '../components/EventsList';
+// import EventsList from '../components/EventsList';
 
-function EventsPage() {
-  const [isLoading, setIsLoading] = useState(false);
-  const [fetchedEvents, setFetchedEvents] = useState();
-  const [error, setError] = useState();
+// function EventsPage() {
+//   const [isLoading, setIsLoading] = useState(false);
+//   const [fetchedEvents, setFetchedEvents] = useState();
+//   const [error, setError] = useState();
 
-  useEffect(() => {
-    async function fetchEvents() {
-      setIsLoading(true);
-      const response = await fetch('http://localhost:8080/events');
+//   useEffect(() => {
+//     async function fetchEvents() {
+//       setIsLoading(true);
+//       const response = await fetch('http://localhost:8080/events');
 
-      if (!response.ok) {
-        setError('Fetching events failed.');
-      } else {
-        const resData = await response.json();
-        setFetchedEvents(resData.events);
-      }
-      setIsLoading(false);
-    }
+//       if (!response.ok) {
+//         setError('Fetching events failed.');
+//       } else {
+//         const resData = await response.json();
+//         setFetchedEvents(resData.events);
+//       }
+//       setIsLoading(false);
+//     }
 
-    fetchEvents();
-  }, []);
+//     fetchEvents();
+//   }, []);
+//   return (
+//     <>
+//       <div style={{ textAlign: 'center' }}>
+//         {isLoading && <p>Loading...</p>}
+//         {error && <p>{error}</p>}
+//       </div>
+//       {!isLoading && fetchedEvents && <EventsList events={fetchedEvents} />}
+//     </>
+//   );
+// }
+
+// export default EventsPage;
+
+
+
+import classes from './PageContent.module.css';
+
+function PageContent({ title, children }) {
   return (
-    <>
-      <div style={{ textAlign: 'center' }}>
-        {isLoading && <p>Loading...</p>}
-        {error && <p>{error}</p>}
-      </div>
-      {!isLoading && fetchedEvents && <EventsList events={fetchedEvents} />}
-    </>
+    <div className={classes.content}>
+      <h1>{title}</h1>
+      {children}
+    </div>
   );
 }
 
-export default EventsPage;
+export default PageContent;

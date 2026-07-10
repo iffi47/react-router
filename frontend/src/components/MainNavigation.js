@@ -3,6 +3,7 @@ import classes from "./MainNavigation.module.css";
 const PAGES = [
  { name: "Home", path: "/" },
  { name: "Events", path: "/events" },
+ { name: "NewsLetter", path: "/newsletter" },
 ];
 
 function MainNavigation() {
